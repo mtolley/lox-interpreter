@@ -1,10 +1,9 @@
 {
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^20.6.3",
     "@tsconfig/node20": "^20.1.2",
     "typescript": "^5.2.2"
-  },
-  "devDependencies": {
-    "@types/node": "^20.6.3"
   },
   "scripts": {
     "build": "tsc",
