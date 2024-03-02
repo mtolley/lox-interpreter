@@ -1,8 +1,13 @@
 import BinaryExpression from "./binary-expression";
 import LiteralExpression from "./literal-expression";
 import Expression, { ExpressionVisitor } from "./expression";
+import UnaryExpression from "./unary-expression";
 
 class ASTPrinter implements ExpressionVisitor<string> {
+  visitUnaryExpression(expression: UnaryExpression): string {
+    return this.parenthesize(expression.operator.lexeme, expression.expression);
+  }
+
   print(expression: Expression): string {
     return expression.accept(this);
   }
